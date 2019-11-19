@@ -5,8 +5,11 @@ var cognomeUtente;
 var cognomi = ['Rossi','Bianchi','Esposito','Brambilla','Caio','Sempronio'];
 
 do {
-    cognomeUtente = prompt('Inserisci il tuo cognome')
+    cognomeUtente = prompt('Inserisci il tuo cognome');
 } while (cognomeUtente.length < 2);
+
+cognomeUtente = cognomeUtente.charAt(0).toUpperCase() + cognomeUtente.slice(1);
+console.log(cognomeUtente);
 
 //Inserisco il cognome dell'utente nell'array dei cognomi esistenti e faccio il log dell'array per controllo
 cognomi.push(cognomeUtente);
